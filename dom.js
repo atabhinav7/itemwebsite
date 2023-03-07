@@ -78,19 +78,136 @@
 //  QUERYSELECTORALL //
 
 
-var titles = document.querySelectorAll('.title');
-console.log(titles);
- titles[0].textContent = 'Hello';
+// var titles = document.querySelectorAll('.title');
+// console.log(titles);
+//  titles[0].textContent = 'Hello';
 
- var odd = document.querySelectorAll('li:nth-child(odd)');
- for( var i =0;i < odd.length; i++){
- odd[i].style.backgroundColor ='#00FF00';
- }
-
-//  var even = document.querySelectorAll('li:nth-child(even)');
-//  for( var i =0;i < even.length; i++){
-//  even[i].style.backgroundColor ='#ccc';
+//  var odd = document.querySelectorAll('li:nth-child(odd)');
+//  for( var i =0;i < odd.length; i++){
+//  odd[i].style.backgroundColor ='#00FF00';
 //  }
 
- var secondItem = document.querySelector('.list-group-item:nth-child(2)');
-secondItem.style.color = 'green';
+// //  var even = document.querySelectorAll('li:nth-child(even)');
+// //  for( var i =0;i < even.length; i++){
+// //  even[i].style.backgroundColor ='#ccc';
+// //  }
+
+//  var secondItem = document.querySelector('.list-group-item:nth-child(2)');
+// secondItem.style.color = 'green';
+
+///TRAVERSING THE DOM //
+
+var itemList = document.querySelector('#items');
+// parentNode //
+// console.log(itemList.parentNode);
+// itemList.parentNode.style.backgroundColor = '#f4f4f4';
+// console.log(itemList.parentNode.parentNode.parentNode);
+
+// PARENTELEMENT //
+
+// console.log(itemList.parentElement);
+// itemList.parentElement.style.backgroundColor = '#f4f4f4';
+// console.log(itemList.parentElement.parentElement.parentElement);
+
+// PARENTELEMENT AND PARENTNODE ARE INTERCHANGEBALE AND SAME //
+
+// CHILNODES //
+// console.log(itemList.childNodes);
+
+//children //
+// console.log(itemList.children);
+// console.log(itemList.children[1]);
+// itemList.children[1].style.backgroundColor = 'yellow';
+
+// // /FIRSTCHILD //
+// console.log(itemList.firstChild);
+// // FIRSTCHILD IS USELESS //
+
+
+// //FIRSTELEMENTCHILD //
+
+// console.log(itemList.firstElementChild);
+// itemList.firstElementChild.textContent = "Hello 1";
+
+// /lstchild //
+//console.log(itemList.lastchild);
+//LASTELEMENTCHILD //
+
+// console.log(itemList.lastElementChild);
+// itemList.lastElementChild.textContent = "Hello 4";
+
+//nextsibling //
+// console.log(itemList.nextSibling);
+
+//NEXTELEMENTSIBLING // 
+
+// console.log(itemList.nextElementSibling);
+
+//previoussibling //
+// console.log(itemList.previousSibling);
+// //previouselemntsibling //
+// console.log(itemList.previousElementSibling)
+// itemList.previousElementSibling.style.color = 'green'
+
+// createElemnt //
+
+//create a div //
+var newDiv = document.createElement('div');
+//add class //
+newDiv.className = 'hello';
+//add id//
+newDiv.id = 'hello1';
+//add attribute //
+newDiv.setAttribute('title','Hello Div');
+// create text node //
+var newDivtext = document.createTextNode('HEllo ');
+
+// add text to div //
+newDiv.appendChild(newDivtext);
+
+
+var container = document.querySelector('header .container');
+var h1 = document.querySelector('header h1');
+
+console.log(newDiv);
+newDiv.style.fontSize = '30px';
+
+container.insertBefore(newDiv,h1);
+
+
+var firstListItem = document.querySelector('#items li:first-child');
+var helloTextNode = document.createTextNode(' HEllo ');
+firstListItem.parentNode.insertBefore(helloTextNode, firstListItem);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
